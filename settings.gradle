@@ -1,0 +1,2 @@
+rootProject.name = 'OnlyAriSensi'
+include ':app'

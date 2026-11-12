@@ -1,0 +1,23 @@
+ONLY ARI SENSI — ফোন থেকেই APK Build করার নিয়ম
+
+এই ZIP-এ AndroidIDE দিয়ে build করার দরকার নেই। GitHub-এর cloud computer APK বানাবে। Android 10-এ তৈরি APK install করা যাবে।
+
+ধাপ ১: ZIP extract করো। ভিতরের OnlyAriSensiNative ফোল্ডারটাই project root।
+
+ধাপ ২: Chrome-এ https://github.com খুলে Sign up / Sign in করো।
+
+ধাপ ৩: + চাপো → New repository। নাম দাও OnlyAriSensiNative। Public নির্বাচন করে Create repository চাপো।
+
+ধাপ ৪: repository-তে Add file → Upload files চাপো। ZIP extract করা OnlyAriSensiNative ফোল্ডারের ভেতরের সব ফাইল ও ফোল্ডার (app, .github, build.gradle, settings.gradle, gradle.properties ইত্যাদি) upload করো। খেয়াল রাখবে: repository-র root-এ সরাসরি build.gradle এবং app/ থাকবে; অতিরিক্ত OnlyAriSensiNative/ ফোল্ডারের ভিতরে থাকবে না। Hidden .github ফোল্ডারটিও upload করতে হবে।
+
+ধাপ ৫: Commit changes চাপো।
+
+ধাপ ৬: repository-র Actions tab খোলো → Build ONLY ARI SENSI APK workflow → Run workflow → সবুজ Run workflow চাপো। প্রথমবার build হতে কয়েক মিনিট লাগতে পারে।
+
+ধাপ ৭: build শেষ হলে সবুজ Success দেখাবে। ওই run-এ ঢুকে নিচে Artifacts থেকে ONLY-ARI-SENSI-APK.zip download করো। ZIP extract করলে app-debug.apk পাবে।
+
+ধাপ ৮: APK ফোনে install করো। Android জিজ্ঞেস করলে Chrome/Files-কে Install unknown apps অনুমতি দাও। App খুলে floating icon চালু করতে Display over other apps অনুমতি দেবে।
+
+যদি build লাল Failed দেখায়, Actions-এর error/log-এর screenshot পাঠাবে—অনুমান করে কোনো ফাইল বদলাবে না।
+
+নোট: GitHub-এ public repository করলে source code public হবে। ব্যক্তিগত কিছু (password, token, personal file) upload করবে না। এই project-এ কোনো secret/token থাকার কথা নয়। APK build সফল হবে—এটা আগে থেকে guarantee নয়; GitHub build log-ই নিশ্চিত করবে।
